@@ -1,0 +1,37 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.gridData {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .gridData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .gridData {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+}
+.functionality {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.functionality button,
+select {
+  padding: 3px 8px;
+  background-color: lavenderblush;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
