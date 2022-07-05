@@ -11,7 +11,7 @@ export const DetailComponent = ({ data }) => {
         Min &#8377;{minOrder} * Up to {deliveryTime} min
       </p>
       <p>
-        Accepts{" "}
+
         {payment_methods.card && payment_methods.cash
           ? "All payments accepted"
           : (payment_methods.card && "Accepts Online Payments only.") ||
