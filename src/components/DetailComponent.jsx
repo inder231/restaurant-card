@@ -1,13 +1,7 @@
 import styles from "./restaurantcard.module.css";
 export const DetailComponent = ({ data }) => {
-  const {
-    cuisine,
-    deliveryTime,
-    minOrder,
-    name,
-    costForTwo,
-    payment_methods
-  } = data;
+  const { cuisine, deliveryTime, minOrder, name, costForTwo, payment_methods } =
+    data;
   return (
     <div>
       <h3>{name}</h3>
@@ -18,11 +12,10 @@ export const DetailComponent = ({ data }) => {
       </p>
       <p>
         Accepts{" "}
-        {payment_methods.card
-          ? "Online payments only."
-          : payment_methods.cash
-          ? "Cash payments only."
-          : "bitcoin payments."}{" "}
+        {payment_methods.card && payment_methods.cash
+          ? "All payments accepted"
+          : (payment_methods.card && "Accepts Online Payments only.") ||
+            (payment_methods.cash && "Accepts Cash Payments only.")}
       </p>
     </div>
   );
